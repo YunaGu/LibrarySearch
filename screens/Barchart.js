@@ -1,7 +1,7 @@
 import { SvgChart, SVGRenderer } from '@wuba/react-native-echarts';
 import * as echarts from 'echarts/core';
 import { useRef, useEffect } from 'react';
-import {Dimensions} from 'react-native';
+// import {Dimensions} from 'react-native';
 import {
   BarChart,
 } from 'echarts/charts';

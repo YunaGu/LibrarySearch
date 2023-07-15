@@ -4,6 +4,7 @@ import People from "../assets/people.png";
 import Icon from 'react-native-vector-icons/Ionicons';
 // import Barchart from './Barchart'
 import Barchart from './Barchart';
+import BottomModal from './BottomModal';
 
 export default class Occupancy extends Component {
   render() {
@@ -18,10 +19,12 @@ export default class Occupancy extends Component {
             {/* <Icon name="chevron-down-outline" size={24} color='#383735'></Icon> */}
         </View>
 
-        <View style={styles.border}>
+        {/* <View style={styles.border}>
             <Text style={styles.textBodyDefault}>Ground floor</Text>
             <Icon name="chevron-down-outline" size={14} color='#383735'></Icon>
-        </View>
+        </View> */}
+
+        <BottomModal />
         
         <View style={styles.rates}>
             <View style={styles.realTime}>
