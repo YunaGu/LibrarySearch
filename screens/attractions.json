@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "name": "Phi Phi Islands",
+    "detail": "Phi Phi Islands are a group of islands in Thailand between the large island of Phuket and the Malacca Coastal Strait of Thailand.",
+    "coverimage": "https://www.melivecode.com/attractions/1.jpg",
+    "latitude": "7.74073905",
+    "longitude": "98.77841034"
+  },
+  {
+    "id": 2,
+    "name": "Eiffel Tower",
+    "detail": "Eiffel Tower is one of the most famous structures in the world. Eiffel Tower is named after a leading French architect and engineer. It was built as a symbol of the World Fair in 1889.",
+    "coverimage": "https://www.melivecode.com/attractions/2.jpg",
+    "latitude": "48.8584",
+    "longitude": "2.2945"
+  },
+  {
+    "id": 3,
+    "name": "Times Square",
+    "detail": "Times Square has become a global landmark and has become a symbol of New York City. This is a result of Times Square being a modern, futuristic venue, with huge advertising screens dotting its surroundings.",
+    "coverimage": "https://www.melivecode.com/attractions/3.jpg",
+    "latitude": "40.757978",
+    "longitude": "-73.985538"
+  },
+  {
+    "id": 4,
+    "name": "Mount Fuji",
+    "detail": "Mount Fuji is the highest mountain in Japan, about 3,776 meters (12,388 feet) situated to the west of Tokyo. Mount Fuji can be seen from Tokyo on clear days.",
+    "coverimage": "https://www.melivecode.com/attractions/4.jpg",
+    "latitude": "35.36062360",
+    "longitude": "138.72736391"
+  },
+  {
+    "id": 5,
+    "name": "Big Ben",
+    "detail": "Westminster Palace Clock Tower which is most often referred to as Big Ben. This is actually the nickname for the largest bell that hangs in the vent above the clock face.",
+    "coverimage": "https://www.melivecode.com/attractions/5.jpg",
+    "latitude": "51.50072907",
+    "longitude": "-0.12462521"
+  },
+  {
+    "id": 6,
+    "name": "Taj Mahal",
+    "detail": "The Taj Mahal or Tachomhal is a burial building made of ivory white marble. The Taj Mahal began to be built in 1632 and was completed in 1643.",
+    "coverimage": "https://www.melivecode.com/attractions/6.jpg",
+    "latitude": "27.1750151", 
+    "longitude": "78.0421552"
+  },
+  {
+    "id": 7,
+    "name": "Stonehenge",
+    "detail": "Stonehenge is a monument prehistoric In the middle of a vast plain in the southern part of the British. The monument itself consists of 112 gigantic stone blocks arranged in 3 overlapping circles.",
+    "coverimage": "https://www.melivecode.com/attractions/7.jpg",
+    "latitude": "51.178882",
+    "longitude": "-1.826215"
+  },
+  {
+    "id": 8,
+    "name": "Statue of Liberty",
+    "detail": "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States. The copper statue, a gift from the people of France to the people of the United States.",
+    "coverimage": "https://www.melivecode.com/attractions/8.jpg",
+    "latitude": "40.68936203",
+    "longitude": "-74.04448570"
+  },
+  {
+    "id": 9,
+    "name": "Sydney Opera House",
+    "detail": "The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the most famous and distinctive buildings and a masterpiece of 20th century architecture.",
+    "coverimage": "https://www.melivecode.com/attractions/9.jpg",
+    "latitude": "-33.8567844",
+    "longitude": "151.2152967"
+  },
+  {
+    "id": 10,
+    "name": "Great Pyramid of Giza",
+    "detail": "The Great Pyramid of Giza is the oldest and largest of the pyramids in the Giza pyramid complex bordering present-day Giza in Greater Cairo, Egypt. It is the oldest of the Seven Wonders of the Ancient World, and the only one to remain largely intact.",
+    "coverimage": "https://www.melivecode.com/attractions/10.jpg",
+    "latitude": "29.9791670",
+    "longitude": "31.1341670"
+  },
+  {
+    "id": 11,
+    "name": "Hollywood Sign",
+    "detail": "The Hollywood Sign is an American landmark and cultural icon overlooking Hollywood, Los Angeles, California. It is situated on Mount Lee, in the Beachwood Canyon area of the Santa Monica Mountains. Spelling out the word Hollywood in 45 ft (13.7 m)-tall white capital letters and 350 feet (106.7 m) long.",
+    "coverimage": "https://www.melivecode.com/attractions/11.jpg",
+    "latitude": "34.1340610",
+    "longitude": "-118.3215920"
+  },
+  {
+    "id": 12,
+    "name": "Wat Phra Kaew",
+    "detail": "Wat Phra Kaew, commonly known in English as the Temple of the Emerald Buddha and officially as Wat Phra Si Rattana Satsadaram, is regarded as the most sacred Buddhist temple in Thailand. The complex consists of a number of buildings within the precincts of the Grand Palace in the historical centre of Bangkok.",
+    "coverimage": "https://www.melivecode.com/attractions/12.jpg",
+    "latitude": "13.75164250",
+    "longitude": "100.49270472"
+  },
+  {
+    "id": 13,
+    "name": "Rio de Janeiro",
+    "detail": "Rio de Janeiro is famous for its festivals and carnivals. There is a samba-style culture for once. There are also sports games that are of worldwide interest, such as hosting the World Cup.",
+    "coverimage": "https://live.staticflickr.com/1849/29879883017_1fbc001db4_b.jpg",
+    "latitude": "-22.95191841",
+    "longitude": "-43.21048730"
+  },
+  {
+    "id": 14,
+    "name": "Hillier Lake",
+    "detail": "Hillier Lake is located on Middle Island. Islands Australia It is bizarre that the water in this lake is pink like strawberry milkshake, and Hillier Lake is different from other pink lakes in that the water in the lake is actually pink, not caused by sediment, reflection, or algae in the water.",
+    "coverimage": "https://th.bing.com/th/id/OIP.ClxyVDdP8-eRqOWw4tlxowHaE2?pid=ImgDet&rs=1",
+    "latitude": "-34.09500105",
+    "longitude": "123.20277784"
+
+  },
+  {
+    "id": 15,
+    "name": "Giant Causeway",
+    "detail": "Giants Causeway Beach is a beach filled with over 40,000 stone pillars and was declared a UNESCO World Heritage Site in 1986 on the north-east coast of Northern Ireland. Anyone who wants to visit here needs to be careful with the pricking stones.",
+    "coverimage": "https://th.bing.com/th/id/OIP.HB-YPOWiWf8FAw3uR0AIBAHaE7?pid=ImgDet&rs=1",
+    "latitude": "55.2408330",
+    "longitude": "-6.5116670"
+  },
+  {
+    "id": 16,
+    "name": "Reykjavik",
+    "detail": "Reykjavik is iceland capital and the capital located closest to the North Pole. Soaking in a natural hot spring in the freezing cold is something everyone will find in winter.",
+    "coverimage": "https://th.bing.com/th/id/R.e487f82e3fac60fe24bdf2b33b5f37b2?rik=9xr8XiPnOkYz0g&pid=ImgRaw&r=0",
+    "latitude": "64.128288",
+    "longitude": "-21.827774"
+  },
+  {
+    "id": 17,
+    "name": "Yellowstone National Park",
+    "detail": "YellowStone is America first national park and also the world first. The total area is on the Rocky Mountain Plateau, more than 2 million acres. There are more than 10,000 hot springs and hot springs.",
+    "coverimage": "https://th.bing.com/th/id/OIP.SH-tlmMbKqHABDLOJWttEAHaE8?pid=ImgDet&w=645&h=430&rs=1",
+    "latitude": "44.418268",
+    "longitude": "-110.572010"
+  },
+  {
+    "id": 18,
+    "name": "Great Blue Hole",
+    "detail": "The Blue Giant Hole of Belize This country is on the eastern side of Central America. Caribbean Seaside The hole is about 60 miles off the coast of Belize, 984 feet in diameter, and about 410 feet deep.",
+    "coverimage": "https://th.bing.com/th/id/OIP.pxFHsiZn9_aZhI9LECV6nQHaE4?pid=ImgDet&rs=1",
+    "latitude": "17.31585455",
+    "longitude": "-87.53472358"
+  },
+  {
+    "id": 19,
+    "name": "Moraine Lake",
+    "detail": "This beautiful blue lake, named Moraine Lake, Canada, is part of Banff National Park. In the Valley of the Ten Peaks, this beautiful blue water is caused by refraction and glaciers, and the lake waters are super colored in late June.",
+    "coverimage": "https://th.bing.com/th/id/R.7f6098cb098b64a92ec7ebe3192567ea?rik=5fWc0eVSgJnJOA&pid=ImgRaw&r=0",
+    "latitude": "51.3215664",
+    "longitude": "-116.18598530"
+  },
+  {
+    "id": 20,
+    "name": "Kinkaku ji Temple",
+    "detail": "The famous Japanese artun, Ikyu-san, must know the temple well. This temple is also known as The Golden Temple. The highlight of the temple is the area of Kinkakuji Castle, a picturesque castle.",
+    "coverimage": "https://th.bing.com/th/id/R.cd247e4cf05792dec73944bbdeb2cbe4?rik=mbo%2bIugpjBwYcw&pid=ImgRaw&r=0",
+    "latitude": "35.03936964",
+    "longitude": "135.72924332"
+  },
+  {
+    "id": 21,
+    "name": "Ramkhamhaeng University",
+    "detail": "Ramkhamhaeng University is a government university. Conducting market-based teaching and learning in the same system as Thammasat University and Politics.",
+    "coverimage": "https://th.bing.com/th/id/R.0952b7772f7022382fdc68b65eeef03f?rik=RSHhhOTnkIqYVQ&pid=ImgRaw&r=0",
+    "latitude": "13.75616141",
+    "longitude": "100.61882600"
+  },
+  {
+    "id": 22,
+    "name": "Acropolis",
+    "detail": "The Acropolis is a fortress located in the high mountains of Greece. The most famous Acropolis is the Acropolis of Athens.",
+    "coverimage": "https://greeking.me/media/k2/items/cache/00d9b1e39f02d57be65ad2a9a6eaa3b8_L.jpg",
+    "latitude": "37.971531",
+    "longitude": "23.726715"
+  },
+  {
+    "id": 23,
+    "name": "Socotra Island",
+    "detail": "Socotra One of the most remote places in the world is in the Arabian Sea, about 150 miles of Africa. Drought on the island also produced vegetation shaped like aliens.",
+    "coverimage": "https://th.bing.com/th/id/OIP.f_yqoGR_Ctk7m_ZszEdfcQHaE8?pid=ImgDet&rs=1",
+    "latitude": "12.4634200",
+    "longitude": "53.8237380"
+  },
+  {
+    "id": 24,
+    "name": "Colosseum",
+    "detail": "The Colosseum is a circular shape of brick and sandstone, measuring approximately 527 meters and measuring 57 meters high and can hold about 55,000 spectators. The Colosseum thus became the prototype of various stadiums.",
+    "coverimage": "https://th.bing.com/th/id/OIP.lqDw57Z7jgbuQ6UJPjKSgwHaFJ?pid=ImgDet&rs=1",
+    "latitude": "41.8902510",
+    "longitude": "12.4923730"
+  },
+  {
+    "id": 25,
+    "name": "Xian",
+    "detail": "Xian is a city that is almost three thousand years old. Formerly known as Xianyang, it was the capital of 13 dynasties in China.",
+    "coverimage": "https://th.bing.com/th/id/R.296fbbb1279b37f69cc89ac3bc93f46c?rik=5V9Ux2tIK1XM5Q&pid=ImgRaw&r=0",
+    "latitude": "34.3415680",
+    "longitude": "108.9401780"
+  },
+  {
+    "id": 26,
+    "name": "Salar De Uyuni",
+    "detail": "Salar de Uyuni It is a big sea of salt. One of the world largest mirrors is a flat area made up of vast amounts of salt on an area of 10,582 square kilometers. It is the world largest salt sea.",
+    "coverimage": "https://th.bing.com/th/id/R.664f2a5b7f1cb7f970cdef662c79ab1d?rik=o7on5jIYLxW8Yg&pid=ImgRaw&r=0",
+    "latitude": "-20.163324",
+    "longitude": "-67.410777"
+  },
+  {
+    "id": 27,
+    "name": "Cappadocia",
+    "detail": " Cappadocia A wonderful city located in Turkey. It is a UNESCO-recognized city as a World Heritage Site. In 1985, a special area was formed by the eruption of Mount Erziyes and Volcano Hasan. That was about 3 million years ago.",
+    "coverimage": "https://th.bing.com/th/id/OIP.4dwW36zU9xy94dHya5XP0wHaEJ?pid=ImgDet&rs=1",
+    "latitude": "38.697758",
+    "longitude": "34.899423"
+  },
+  {
+    "id": 28,
+    "name": "Chichen Itza",
+    "detail": "Chichen Itza is a Mayan language meaning the source of people well-being. It is located in southeastern Mexico. It is an archaeological site built by the Mayans, which was built as a memorial to the gods.",
+    "coverimage": "https://th.bing.com/th/id/R.14919491b172ee24b26c9abd7cbed232?rik=z%2baC53gPCPeS5A&pid=ImgRaw&r=0",
+    "latitude": "20.682987",
+    "longitude": "-88.568650"
+  },
+  {
+    "id": 29,
+    "name": "Pamukkale",
+    "detail": "The underground mineral stream flows into limestone puddles, like a beautiful natural edgeless swimming pool. It is caused by the phenomenon in which sediments of limestone react with air. It freezes into a basin, and an overflow of groundwater flows on the surface.",
+    "coverimage": "https://th.bing.com/th/id/OIP.V4bViYLgEJnUycX5vsevCQHaE8?pid=ImgDet&rs=1",
+    "latitude": "37.923385",
+    "longitude": "29.122712"
+
+
+  },
+  {
+    "id": 30,
+    "name": "Venice",
+    "detail": "Among Italy tourist cities, Venice seems to be a unique city that, unlike every city in the world, is located in the middle of a beautiful lake that has earned the nickname The Queen of the Adriatic or The City of Water.",
+    "coverimage": "https://th.bing.com/th/id/R.ab8dda092881d30e40cc90266aa00ace?rik=4TgvQ2vXWogB%2fA&pid=ImgRaw&r=0",
+    "latitude": "45.439644",
+    "longitude": "12.316815"
+  }
+]
