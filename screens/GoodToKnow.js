@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
+import Testnav from './testNav'
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -42,6 +43,7 @@ export default class GoodToKnow extends Component {
     </View>
 
         <View style={styles.card}>
+          <Testnav></Testnav>
         <View style={styles.Tabs}>
             <View style={styles.selectedTab}>
                 <Text style={[styles.textBodyDefault, styles.textGray]}>Floor directory</Text> 
