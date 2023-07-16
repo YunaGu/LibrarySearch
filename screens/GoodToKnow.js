@@ -44,7 +44,7 @@ export default class GoodToKnow extends Component {
 
         <View style={styles.card}>
           <Testnav></Testnav>
-        <View style={styles.Tabs}>
+        {/* <View style={styles.Tabs}>
             <View style={styles.selectedTab}>
                 <Text style={[styles.textBodyDefault, styles.textGray]}>Floor directory</Text> 
             </View>
@@ -57,9 +57,9 @@ export default class GoodToKnow extends Component {
           <View style={styles.unselectedTab}>
               <Text style={[styles.textBodyDefault, styles.textGray]}>Facilities</Text>
           </View>
-        </View>
+        </View> */}
 
-        <View style={styles.floor}>
+        {/* <View style={styles.floor}>
             <View style={styles.lowerGround}>
                 <Text style={[styles.textBodyDefault, styles.textGray]}>Lower ground</Text>
                 <Text style={[styles.textBodyDefault, styles.textGray]}> {'\u2022'} Special Collections and Archives</Text>                   
@@ -81,10 +81,10 @@ export default class GoodToKnow extends Component {
                 <Text style={[styles.textBodyDefault, styles.textGray]}>Second</Text>
                 <Text style={[styles.textBodyDefault, styles.textGray]}>Humanities, including philosophy, religion and theology, archaeology, history, art, language and literature, music, and modern Welsh and Celtic studies</Text>        
             </View>
-        </View>
+        </View> */}
 
         {/* <Text style={[styles.textBodyDefault, styles.textGray]}>You can contact a <Text style={textLinked}>subject librarian</Text> if you have a subject-specific question, or use our general contact details for any other queries.</Text> */}
-        <Text style={[styles.textBodyDefault, styles.textGray]}>You can contact a subject librarian if you have a subject-specific question, or use our general contact details for any other queries.</Text>
+        {/* <Text style={[styles.textBodyDefault, styles.textGray]}>You can contact a subject librarian if you have a subject-specific question, or use our general contact details for any other queries.</Text> */}
 
         {/* <View style={styles.floor}>
             <Text style={[styles.textBodyDefault, styles.textGray]}>An accessible entrance for assisted entry to the building is located on the west side of the building at lower ground floor level. Entry is staff-mediated, use the intercom by the entrance.</Text>        
