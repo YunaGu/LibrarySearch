@@ -1,6 +1,6 @@
-import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native'
 import React, { Component } from 'react'
-import Nav from './Tabs'
+import Tabview from './TabView'
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -16,6 +16,19 @@ export default class GoodToKnow extends Component {
         });
       };
 
+      getIndex = (i) => {
+
+        console.log(i, this.title[i])
+    
+      }
+     
+      // data = {
+      //   title : ['Floor directory','Access','Study Space','Facilities'],
+      //   description: ['Floor directory','Access','Study Space','Facilities'],
+      // }
+  
+      title = ['Floor directory','Access','Study Space','Facilities'];
+        
   render() {
     const {expanded} = this.state;
     return (
@@ -40,7 +53,19 @@ export default class GoodToKnow extends Component {
               <View style={styles.notification}>
                 <Text style={[styles.textBodyDefault, styles.textWhite]}>The building is on four floors and the entrance is on the ground floor.</Text>
               </View>
-              <Nav></Nav>
+              <View style={styles.card}>
+                <ScrollView 
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                snapToAlignment="center"
+                >
+                    <View style={{display: 'flex', flexDirection: 'row'}}>
+                    <Tabview 
+                    title={this.title}
+                    callBack={this.getIndex}/>
+                    </View>
+                </ScrollView>
+              </View>
             </View>
 
             ) : null}

@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
-import Tabs from './Tabs'
+import Tabs from './TabCard'
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
