@@ -134,13 +134,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-    card:{
-        width: '100%',
-        borderRadius: 6,
-        backgroundColor: '#F5F5F3',
-        padding: 10,
-        gap: 10,
-      },
     floor:{
         gap: 10,
         marginLeft: 10,

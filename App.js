@@ -6,6 +6,7 @@ import OpenTime from './screens/OpenTime'
 import Occupancy from './screens/Occupancy'
 import GoodToKnow from './screens/GoodToKnow'
 import Details from './screens/Details'
+// import Test from './screens/Test'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -21,6 +22,7 @@ const App = () => {
       <View style={styles.outtom}>
         <View style={{height:40}}></View>
         <Top></Top>
+        {/* <Test /> */}
         <Seperator></Seperator>
         <OpenTime></OpenTime>
         <Seperator></Seperator>

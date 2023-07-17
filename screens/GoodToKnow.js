@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
-import Testnav from './testNav'
+import Nav from './Tabs'
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -36,67 +36,12 @@ export default class GoodToKnow extends Component {
 
 
             {expanded ? (
-                       
-<View style={styles.couldBeHidden}>
-        <View style={styles.notification}>
-        <Text style={[styles.textBodyDefault, styles.textWhite]}>The building is on four floors and the entrance is on the ground floor.</Text>
-    </View>
-
-        <View style={styles.card}>
-          <Testnav></Testnav>
-        {/* <View style={styles.Tabs}>
-            <View style={styles.selectedTab}>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Floor directory</Text> 
+            <View style={styles.couldBeHidden}>
+              <View style={styles.notification}>
+                <Text style={[styles.textBodyDefault, styles.textWhite]}>The building is on four floors and the entrance is on the ground floor.</Text>
+              </View>
+              <Nav></Nav>
             </View>
-            <View style={styles.unselectedTab}>
-              <Text style={[styles.textBodyDefault, styles.textGray]}>Access</Text>
-          </View>
-          <View style={styles.unselectedTab}>
-              <Text style={[styles.textBodyDefault, styles.textGray]}>Study space</Text>
-          </View>
-          <View style={styles.unselectedTab}>
-              <Text style={[styles.textBodyDefault, styles.textGray]}>Facilities</Text>
-          </View>
-        </View> */}
-
-        {/* <View style={styles.floor}>
-            <View style={styles.lowerGround}>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Lower ground</Text>
-                <Text style={[styles.textBodyDefault, styles.textGray]}> {'\u2022'} Special Collections and Archives</Text>                   
-                <Text style={[styles.textBodyDefault, styles.textGray]}> {'\u2022'} eLounge</Text>
-                <Text style={[styles.textBodyDefault, styles.textGray]}> {'\u2022'} vending machines</Text>        
-            </View>
-
-            <View style={styles.Ground}>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Ground</Text>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Social sciences, psychology, anthropology, education and politics.</Text>        
-            </View>
-
-            <View style={styles.First}>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>First</Text>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Business and economics, law, optometry and vision sciences</Text>        
-            </View>
-
-            <View style={styles.Second}>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Second</Text>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Humanities, including philosophy, religion and theology, archaeology, history, art, language and literature, music, and modern Welsh and Celtic studies</Text>        
-            </View>
-        </View> */}
-
-        {/* <Text style={[styles.textBodyDefault, styles.textGray]}>You can contact a <Text style={textLinked}>subject librarian</Text> if you have a subject-specific question, or use our general contact details for any other queries.</Text> */}
-        {/* <Text style={[styles.textBodyDefault, styles.textGray]}>You can contact a subject librarian if you have a subject-specific question, or use our general contact details for any other queries.</Text> */}
-
-        {/* <View style={styles.floor}>
-            <Text style={[styles.textBodyDefault, styles.textGray]}>An accessible entrance for assisted entry to the building is located on the west side of the building at lower ground floor level. Entry is staff-mediated, use the intercom by the entrance.</Text>        
-            <Text style={[styles.textBodyDefault, styles.textGray]}>A lift provides access to all floors of the library.</Text>        
-            <Text style={[styles.textBodyDefault, styles.textGray]}>Two disabled parking spaces are available close to the Arts and Social Studies Library (by the railway line) which can be accessed from Colum Drive.</Text>        
-            <Text style={[styles.textBodyDefault, styles.textGray]}>An accessible toilet is provided on the entrance floor.</Text>        
-            <Text style={[styles.textBodyDefault, styles.textGray]}>Low-level catalogue terminals are available.</Text>        
-            <Text style={[styles.textBodyDefault, styles.textGray]}>Staff will retrieve books from the shelves, please ask for assistance.</Text>        
-        </View> */}
-
-      </View>
-      </View>
 
             ) : null}
 
