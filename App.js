@@ -17,6 +17,17 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 const Stack = createNativeStackNavigator()
 
 const App = () => {
+
+  fetch('https://reactnative.dev/movies.json')
+  .then(response => response.json())
+  .then(json => {
+    console.log(json);
+    return json.movies;
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
   return (
     <ScrollView>
       <View style={styles.outtom}>

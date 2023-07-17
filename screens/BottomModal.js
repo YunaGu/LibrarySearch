@@ -100,10 +100,10 @@ const styles = StyleSheet.create({
         marginLeft: 38,
     },
   centeredView: {
+    // backgroundColor:'red',
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
-    marginTop: 22,
   },
   modalView: {
     display: 'flex',
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 10,
-    margin: 20,
+    // margin: 20,
     backgroundColor: 'white',
     borderRadius: 20,
     padding: 35,

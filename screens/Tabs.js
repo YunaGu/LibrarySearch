@@ -1,5 +1,6 @@
 import { Text, View, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
 import React, { Component } from 'react'
+import Tabview from './TabView'
 
 export default class Nav extends Component {
     state = {
@@ -89,6 +90,16 @@ export default class Nav extends Component {
       </View>
     );
   }
+
+  getIndex = (i) => {
+
+    console.log(i, this.title[i])
+
+  }
+
+  title = [1,2222,3,4];
+
+
   render() {
 
     const { index } = this.state;
@@ -100,7 +111,14 @@ export default class Nav extends Component {
             showsHorizontalScrollIndicator={false}
             snapToAlignment="center"
             >
-                <TouchableOpacity 
+                <View style={{display: 'flex', flexDirection: 'row'}}>
+                {/* {this.TabView()} */}
+                <Tabview 
+                title={this.title}
+                callBack={this.getIndex}/>
+                </View>
+
+                {/* <TouchableOpacity 
                     onPress={()=>{this._setIndex(0)}}
                     // onLayout={(e)=>{this._setLayout(e.nativeEvent.layout)}}
                     style = {index == 0 ? styles.selecedTab : styles.unselecedTab}
@@ -127,7 +145,7 @@ export default class Nav extends Component {
                     style = {index == 3 ? styles.selecedTab : styles.unselecedTab}
                 >
                     <Text style={index == 3 ? styles.textBodyBold : styles.textBodyDefault}>Facilities</Text>
-                </TouchableOpacity>   
+                </TouchableOpacity>    */}
             </ScrollView>
             
             <View style={{display: 'flex', flexDirection:'row'}}>

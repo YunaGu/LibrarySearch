@@ -1,7 +1,9 @@
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
+import Tabs from './Tabs'
 
 import Icon from 'react-native-vector-icons/Ionicons';
+
 
 export default class Details extends Component {
   state ={
@@ -14,6 +16,7 @@ export default class Details extends Component {
        expanded: !expanded,
     });
   };
+
 
   render() {
       const {expanded} = this.state;
@@ -35,8 +38,10 @@ export default class Details extends Component {
         </TouchableOpacity>
 
         {expanded ? (
+
         <View style={styles.couldBeHidden}>
-                  <View style={styles.card}>
+                    <Tabs></Tabs>
+                  {/* <View style={styles.card}>
             <View style={styles.Tabs}>
                 <View style={styles.selectedTab}>
                     <Text style={[styles.textBodyDefault, styles.textGray]}>Address</Text> 
@@ -67,9 +72,10 @@ export default class Details extends Component {
             </View> */}
             
 
-          </View>
+          {/* </View>  */}
 
-        </View>):null} 
+        </View>)
+        :null} 
 
       </View>
     )
