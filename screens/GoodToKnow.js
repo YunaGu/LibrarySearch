@@ -1,36 +1,52 @@
 import { Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native'
 import React, { Component } from 'react'
-import Tabview from './TabView'
+// import Tabview from './TabView'
+import Tabs from './Tabs';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class GoodToKnow extends Component {
-    state ={
-        expanded: true,
-      }
-    
-      _toggleItem = (expanded) => {
-        // console.log("You tapped the button!");
-        this.setState({
-           expanded: !expanded,
-        });
-      };
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeTab: 0,
+      expanded: true,
+    };
+  }
 
-      getIndex = (i) => {
+  handleTabPress = (index) => {
+    this.setState({ activeTab: index });
+  };
 
-        console.log(i, this.title[i])
+  _toggleItem = (expanded) => {
+    // console.log("You tapped the button!");
+    this.setState({
+       expanded: !expanded,
+    });
+  };
+
+
+      // getIndex = (i) => {
+
+      //   console.log(i, this.title[i])
     
-      }
+      // }
      
       // data = {
       //   title : ['Floor directory','Access','Study Space','Facilities'],
       //   description: ['Floor directory','Access','Study Space','Facilities'],
       // }
-  
-      title = ['Floor directory','Access','Study Space','Facilities'];
-        
+          
   render() {
-    const {expanded} = this.state;
+    const {expanded, activeTab} = this.state;
+    const tabs = [
+      { title: 'Floor directory', 
+      content: 'The building is on four floors and the entrance is on the ground floor.\nLower ground\nSpecial Collections and Archives\neLounge\nvending machines\nGround\nSocial sciences, psychology, anthropology, education and politics.\nFirst\nBusiness and economics, law, optometry and vision sciences\nSecond\nHumanities, including philosophy, religion and theology, archaeology, history, art, language and literature, music, and modern Welsh and Celtic studies\nYou can contact a subject librarian if you have a subject-specific question, or use our general contact details for any other queries.'},
+      { title: 'Access', content: 'An accessible entrance for assisted entry to the building is located on the west side of the building at lower ground floor level. Entry is staff-mediated, use the intercom by the entrance.\nA lift provides access to all floors of the library.\nTwo disabled parking spaces are available close to the Arts and Social Studies Library (by the railway line) which can be accessed from Colum Drive.\nAn accessible toilet is provided on the entrance floor.\nLow-level catalogue terminals are available.\nStaff will retrieve books from the shelves, please ask for assistance.' },
+      { title: 'Study Space', content: 'The library has a variety of silent, quiet and social zones with range of study spaces including desks with or without electrical sockets, height adjustable desks and open access PCs.\nLibrary group rooms allows you to find and book group study rooms in libraries across the University.' },
+      { title: 'Facilities', content: 'Accessibility, Printers, Power Sockets, Wifi, Cloakroom, Computers, Study rooms, Lockers' },
+    ];
+    
     return (
       <View style={styles.compWrapper}>
 
@@ -54,17 +70,12 @@ export default class GoodToKnow extends Component {
                 <Text style={[styles.textBodyDefault, styles.textWhite]}>The building is on four floors and the entrance is on the ground floor.</Text>
               </View>
               <View style={styles.card}>
-                <ScrollView 
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                snapToAlignment="center"
-                >
-                    <View style={{display: 'flex', flexDirection: 'row'}}>
-                    <Tabview 
-                    title={this.title}
-                    callBack={this.getIndex}/>
-                    </View>
-                </ScrollView>
+                <View style={styles.container}>
+                  <Tabs tabs={tabs} onTabPress={this.handleTabPress} />
+                  <View style={styles.contentContainer}>
+                    <Text style={[styles.textBodyDefault,styles.content]}>{tabs[activeTab].content}</Text>
+                  </View>
+              </View>
               </View>
             </View>
 
@@ -79,6 +90,51 @@ export default class GoodToKnow extends Component {
 
 
 const styles = StyleSheet.create({
+  content:{
+    // marginHorizontal: 10,
+    marginVertical: 10,
+    // backgroundColor:'red',
+    height: 'auto',
+  },
+  textBodyBold:{
+    color: "#383735",
+    // fontFamily: 'Franklin Gothic Book',
+    fontSize: 17,
+    lineHeight: 24,
+    // fontStyle: 'normal',
+    fontWeight: '600',
+    textAlign: "left",
+},
+textBodyDefault:{
+    color: "#383735",
+    // fontFamily: 'Franklin Gothic Book',
+    fontSize: 17,
+    lineHeight: 24,
+    // fontStyle: 'normal',
+    fontWeight: '400',
+    textAlign: "left",
+},
+textWhite:{
+    color: "#fff",
+},
+textGray:{
+    color: "#666",
+},
+  container: {
+    flex: 1,
+  },
+  contentContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    backgroundColor: '#F5F5F3',
+    borderBottomLeftRadius: 6,
+    borderBottomRightRadius: 6,
+  },
+  contentText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
     couldBeHidden:{
         width: '100%',
         gap: 10,

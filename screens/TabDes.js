@@ -3,11 +3,10 @@ import React, { Component } from 'react'
 
 
 
-export default class TabView extends Component {
+export default class TabDes extends Component {
 
     state = {
         index: 0,
-        selected: false,
     }
 
 _setIndex = (index) => {
@@ -17,23 +16,21 @@ _setIndex = (index) => {
         callBack(index);
     }
     this.setState({ index: index });
+
+    // console.log(index);
 }
 
   render() {
     const {index} = this.state;
-    const {title} = this.props;
-    return title ? title.map((item, i)=>{
+    const {description} = this.props;
+    return description ? description.map((item, i)=>{
         return (      
-                <ScrollView>
-                    <TouchableOpacity 
-                        key={i}
-                        onPress={()=>{this._setIndex(i)}}
-                        // onLayout={(e)=>{this._setLayout(e.nativeEvent.layout)}}
-                        style = {index == i ? styles.selecedTab : styles.unselecedTab}
-                    >
-                        <Text style={index == i ? styles.textBodyBold : styles.textBodyDefault}>{item}</Text>
-                    </TouchableOpacity>  
-                </ScrollView>     
+            <TouchableOpacity 
+                key={i}
+                onPress={()=>{this._setIndex(i)}}
+            >
+                <Text style={index == i ? styles.textBodyBold : styles.textBodyDefault}>{item}</Text>
+            </TouchableOpacity>  
 )
     }):null;
   }
@@ -41,6 +38,9 @@ _setIndex = (index) => {
 
 
 const styles = StyleSheet.create({
+    tabDescription:{
+        width: 390,
+    },
     tabContainer:{
         display: 'flex',
         flexDirection: 'row',

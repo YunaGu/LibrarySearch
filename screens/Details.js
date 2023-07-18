@@ -1,14 +1,26 @@
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
-import Tabs from './TabCard'
+// import Tabs from './TabCard'
+import Tabs from './Tabs';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
 export default class Details extends Component {
-  state ={
-    expanded: true,
+  // state ={
+  // }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeTab: 0,
+      expanded: true,
+    };
   }
+
+  handleTabPress = (index) => {
+    this.setState({ activeTab: index });
+  };
 
   _toggleItem = (expanded) => {
     // console.log("You tapped the button!");
@@ -19,7 +31,15 @@ export default class Details extends Component {
 
 
   render() {
-      const {expanded} = this.state;
+      const {expanded, activeTab} = this.state;
+      
+      const tabs = [
+        { title: 'Address', content: 'Colum Drive\nCathays\nCF10 3EU' },
+        { title: 'Contact Details', content: '+44 (0)29 2087 4818\nasslliby@cardiff.ac.uk\nlibrarydisabilitycontact@cardiff.ac.uk\nUniversity Library Service' },
+        { title: 'Twitter', content: '@cardiffunilib' },
+        { title: 'Blog', content: 'Blog' },
+      ];
+      
       return (
         <View style={styles.compWrapper}>
   
@@ -38,43 +58,15 @@ export default class Details extends Component {
         </TouchableOpacity>
 
         {expanded ? (
-
-        <View style={styles.couldBeHidden}>
-                    <Tabs></Tabs>
-                  {/* <View style={styles.card}>
-            <View style={styles.Tabs}>
-                <View style={styles.selectedTab}>
-                    <Text style={[styles.textBodyDefault, styles.textGray]}>Address</Text> 
-                </View>
-                <View style={styles.unselectedTab}>
-                  <Text style={[styles.textBodyDefault, styles.textGray]}>Contact details</Text>
-              </View>
-              <View style={styles.unselectedTab}>
-                  <Text style={[styles.textBodyDefault, styles.textGray]}>Twitter</Text>
-              </View>
-              <View style={styles.unselectedTab}>
-                  <Text style={[styles.textBodyDefault, styles.textGray]}>Blog</Text>
+          <View style={styles.card}>
+            <View style={styles.container}>
+              <Tabs tabs={tabs} onTabPress={this.handleTabPress} />
+              <View style={styles.contentContainer}>
+                <Text style={[styles.textBodyDefault,styles.content]}>{tabs[activeTab].content}</Text>
               </View>
             </View>
-
-            <View style={styles.tabContent}>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Colum Drive</Text>  
-                <Text style={[styles.textBodyDefault, styles.textGray]}>Cathays</Text>  
-                <Text style={[styles.textBodyDefault, styles.textGray]}>CF10 3EU</Text>    
-            </View>
-
-            {/* <View style={styles.tabContent}>
-                <Text style={[styles.textBodyDefault, styles.textGray]}>+44 (0)29 2087 4818</Text>   */}
-                {/* should be linked below */}
-                {/* <Text style={[styles.textBodyDefault, styles.textGray]}>asslliby@cardiff.ac.uk</Text>  
-                <Text style={[styles.textBodyDefault, styles.textGray]}>librarydisabilitycontact@cardiff.ac.uk</Text>    
-                <Text style={[styles.textBodyDefault, styles.textGray]}>University Library Service</Text>    
-            </View> */}
-            
-
-          {/* </View>  */}
-
-        </View>)
+          </View>
+        )
         :null} 
 
       </View>
@@ -84,6 +76,48 @@ export default class Details extends Component {
 
 
 const styles = StyleSheet.create({
+  content:{
+    // marginHorizontal: 10,
+    marginVertical: 10,
+    height: 'auto',
+  },
+  textBodyBold:{
+    color: "#383735",
+    // fontFamily: 'Franklin Gothic Book',
+    fontSize: 17,
+    lineHeight: 24,
+    // fontStyle: 'normal',
+    fontWeight: '600',
+    textAlign: "left",
+},
+textBodyDefault:{
+    color: "#383735",
+    // fontFamily: 'Franklin Gothic Book',
+    fontSize: 17,
+    lineHeight: 24,
+    // fontStyle: 'normal',
+    fontWeight: '400',
+    textAlign: "left",
+},
+textWhite:{
+    color: "#fff",
+},
+textGray:{
+    color: "#666",
+},
+  container: {
+    flex: 1,
+  },
+  contentContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    backgroundColor: '#F5F5F3',
+  },
+  contentText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
     tabContent:{
         marginLeft: 10,
         marginRight: 10,

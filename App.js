@@ -6,7 +6,6 @@ import OpenTime from './screens/OpenTime'
 import Occupancy from './screens/Occupancy'
 import GoodToKnow from './screens/GoodToKnow'
 import Details from './screens/Details'
-// import Test from './screens/Test'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -18,22 +17,21 @@ const Stack = createNativeStackNavigator()
 
 const App = () => {
 
-  fetch('https://reactnative.dev/movies.json')
-  .then(response => response.json())
-  .then(json => {
-    console.log(json);
-    return json.movies;
-  })
-  .catch(error => {
-    console.error(error);
-  });
+  // fetch('https://reactnative.dev/movies.json')
+  // .then(response => response.json())
+  // .then(json => {
+  //   console.log(json);
+  //   return json.movies;
+  // })
+  // .catch(error => {
+  //   console.error(error);
+  // });
 
   return (
     <ScrollView>
       <View style={styles.outtom}>
         <View style={{height:40}}></View>
         <Top></Top>
-        {/* <Test /> */}
         <Seperator></Seperator>
         <OpenTime></OpenTime>
         <Seperator></Seperator>
