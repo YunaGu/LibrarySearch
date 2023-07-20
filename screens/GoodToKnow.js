@@ -2,6 +2,10 @@ import { Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-nativ
 import React, { Component } from 'react'
 // import Tabview from './TabView'
 import Tabs from './Tabs';
+import FloorDirectory from './contents/FloorDirectory';
+import Access from './contents/Access';
+import StudySpace from './contents/studySpace';
+import Facilities from './contents/Facilities';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -25,26 +29,30 @@ export default class GoodToKnow extends Component {
     });
   };
 
-
-      // getIndex = (i) => {
-
-      //   console.log(i, this.title[i])
-    
-      // }
-     
-      // data = {
-      //   title : ['Floor directory','Access','Study Space','Facilities'],
-      //   description: ['Floor directory','Access','Study Space','Facilities'],
-      // }
+  renderContent = (index) => {
+    switch (index) {
+      case 0:
+        return <FloorDirectory />;
+      case 1:
+        return <Access />;
+      case 2:
+        return <StudySpace />;
+      case 3:
+        return <Facilities />;
+      default:
+        return null;
+    }
+  };
           
   render() {
     const {expanded, activeTab} = this.state;
+
     const tabs = [
       { title: 'Floor directory', 
-      content: 'The building is on four floors and the entrance is on the ground floor.\nLower ground\nSpecial Collections and Archives\neLounge\nvending machines\nGround\nSocial sciences, psychology, anthropology, education and politics.\nFirst\nBusiness and economics, law, optometry and vision sciences\nSecond\nHumanities, including philosophy, religion and theology, archaeology, history, art, language and literature, music, and modern Welsh and Celtic studies\nYou can contact a subject librarian if you have a subject-specific question, or use our general contact details for any other queries.'},
-      { title: 'Access', content: 'An accessible entrance for assisted entry to the building is located on the west side of the building at lower ground floor level. Entry is staff-mediated, use the intercom by the entrance.\nA lift provides access to all floors of the library.\nTwo disabled parking spaces are available close to the Arts and Social Studies Library (by the railway line) which can be accessed from Colum Drive.\nAn accessible toilet is provided on the entrance floor.\nLow-level catalogue terminals are available.\nStaff will retrieve books from the shelves, please ask for assistance.' },
-      { title: 'Study Space', content: 'The library has a variety of silent, quiet and social zones with range of study spaces including desks with or without electrical sockets, height adjustable desks and open access PCs.\nLibrary group rooms allows you to find and book group study rooms in libraries across the University.' },
-      { title: 'Facilities', content: 'Accessibility, Printers, Power Sockets, Wifi, Cloakroom, Computers, Study rooms, Lockers' },
+      content: this.renderContent(0) },
+      { title: 'Access', content: this.renderContent(1) },
+      { title: 'Study Space', content: this.renderContent(2) },
+      { title: 'Facilities', content: this.renderContent(3) },
     ];
     
     return (
