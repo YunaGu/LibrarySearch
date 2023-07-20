@@ -1,11 +1,11 @@
-import { Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
 // import Tabview from './TabView'
 import Tabs from './Tabs';
-import FloorDirectory from './contents/FloorDirectory';
-import Access from './contents/Access';
-import StudySpace from './contents/studySpace';
-import Facilities from './contents/Facilities';
+import FloorDirectory from './contents/goodToKnow/FloorDirectory';
+import Access from './contents/goodToKnow/Access';
+import StudySpace from './contents/goodToKnow/studySpace';
+import Facilities from './contents/goodToKnow/Facilities';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
