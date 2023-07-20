@@ -2,6 +2,10 @@ import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
 // import Tabs from './TabCard'
 import Tabs from './Tabs';
+import Address from './contents/details/address';
+import ContactDetails from './contents/details/contactDetails';
+import Twitter from './contents/details/twitter';
+import Blog from './contents/details/blog';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -29,15 +33,30 @@ export default class Details extends Component {
     });
   };
 
+  renderContent = (index) => {
+    switch (index) {
+      case 0:
+        return <Address />;
+      case 1:
+        return <ContactDetails />;
+      case 2:
+        return <Twitter />;
+      case 3:
+        return <Blog />;
+      default:
+        return null;
+    }
+  };
+
 
   render() {
       const {expanded, activeTab} = this.state;
       
       const tabs = [
-        { title: 'Address', content: 'Colum Drive\nCathays\nCF10 3EU' },
-        { title: 'Contact Details', content: '+44 (0)29 2087 4818\nasslliby@cardiff.ac.uk\nlibrarydisabilitycontact@cardiff.ac.uk\nUniversity Library Service' },
-        { title: 'Twitter', content: '@cardiffunilib' },
-        { title: 'Blog', content: 'Blog' },
+        { title: 'Address', content: this.renderContent(0) },
+        { title: 'Contact Details', content: this.renderContent(1)},
+        { title: 'Twitter', content: this.renderContent(2)},
+        { title: 'Blog', content: this.renderContent(3)},
       ];
       
       return (
