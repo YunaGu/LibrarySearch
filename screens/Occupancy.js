@@ -3,17 +3,15 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import People from "../assets/people.png";
 // import Icon from 'react-native-vector-icons/Ionicons';
 import BarChart from './CustomisedBarChart';
-import Barchart from './Barchart';
+// import Barchart from './Barchart';
 import BottomModal from './BottomModal';
 
 const Occupancy = () => {
 
-  const [realTimeOccupancy, setRealTimeOccupancy] = useState(70);
-  const [selectedColumnIndex, setSelectedColumnIndex] = useState(-1);
-  const [realTimeData, setRealTimeData] = useState({ time: '11 am', value: 70 });
-  const [forecastData, setForecastData] = useState({ time: 'Tap hours for forecasts', value: '' });
-
   const data = [10,10,10,10,10,10,10,5,10,40,70,60,50,55,70,60,30,20,10,3,20,20,20,20];
+
+      // Get the current hour from the system time
+      const currentHour = new Date().getHours();
 
 
   return (
@@ -30,8 +28,8 @@ const Occupancy = () => {
 
       <View style={styles.rates}>
         <View style={styles.realTime}>
-          <Text style={styles.textBodyDefault}>Real time: {realTimeData.time} - </Text>
-          <Text style={[styles.textBodyDefault, styles.textBlue]}>{realTimeData.value}%</Text>
+          <Text style={styles.textBodyDefault}>Real time: {currentHour} {(currentHour>12? 'pm': 'am' )} - </Text>
+          <Text style={[styles.textBodyDefault, styles.textBlue]}>{data[currentHour]}%</Text>
         </View>
 
         <View style={styles.forecast}>
@@ -44,10 +42,11 @@ const Occupancy = () => {
         {/* <Barchart data={[0, 0, 0, 0, 0, 0, 0, 5, 10, 40, { value: 70, itemStyle: { color: '#045BC6' } }, 60, 50, 55, 70, 60, 30, 20, 10, 3, 0, 0, 0, 0]} selectedColumnIndex={selectedColumnIndex} /> */}
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       {/* <BarChart data={data} /> */}
+      <BarChart data={data} />
     </View>
       </View>
-      <BarChart data={data} />
-      <Barchart />
+
+      {/* <Barchart /> */}
     </View>
   );
 };

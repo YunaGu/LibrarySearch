@@ -30,7 +30,7 @@ const BarChart = ({ data }) => {
         {data.map((value, index) => (
           <TouchableOpacity 
             key={index}    
-            onPress={() => handleColumnClick(index)}         
+            onPress={() => handleColumnClick(index)}        
             style={[
               styles.barContainer,
               index === currentHour ? styles.highlightedBarContainer : null,
@@ -59,7 +59,7 @@ const BarChart = ({ data }) => {
 
 const styles = StyleSheet.create({
   barChartContainer: {
-    width: 330,
+    width: 300,
     position: 'relative',
   },
   container: {
