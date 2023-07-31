@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import People from "../assets/people.png";
 // import Icon from 'react-native-vector-icons/Ionicons';
 import BarChart from './CustomisedBarChart';
+import Barchart from './Barchart';
 import BottomModal from './BottomModal';
 
 const Occupancy = () => {
@@ -42,9 +43,11 @@ const Occupancy = () => {
       <View style={styles.barChart}>
         {/* <Barchart data={[0, 0, 0, 0, 0, 0, 0, 5, 10, 40, { value: 70, itemStyle: { color: '#045BC6' } }, 60, 50, 55, 70, 60, 30, 20, 10, 3, 0, 0, 0, 0]} selectedColumnIndex={selectedColumnIndex} /> */}
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <BarChart data={data} />
+      {/* <BarChart data={data} /> */}
     </View>
       </View>
+      <BarChart data={data} />
+      <Barchart />
     </View>
   );
 };
