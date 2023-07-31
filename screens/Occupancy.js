@@ -13,7 +13,7 @@ const Occupancy = () => {
   const [realTimeData, setRealTimeData] = useState({ time: '11 am', value: 70 });
   const [forecastData, setForecastData] = useState({ time: 'Tap hours for forecasts', value: '' });
 
-  const data = [0,0,0,0,0,0,0,5,10,40,70,60,50,55,70,60,30,20,10,3,0,0,0,0];
+  const data = [10,10,10,10,10,10,10,5,10,40,70,60,50,55,70,60,30,20,10,3,20,20,20,20];
 
 
   return (

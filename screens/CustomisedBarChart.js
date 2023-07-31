@@ -9,6 +9,9 @@ const BarChart = ({ data }) => {
     '12p', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p', '10p', '11p',
   ];
 
+    // Get the current hour from the system time
+    const currentHour = new Date().getHours();
+
   // Define the indices of the labels to remain visible
   const visibleIndices = [3, 6, 9, 12, 15, 18, 21, 24];
 
@@ -16,7 +19,12 @@ const BarChart = ({ data }) => {
     <View style={styles.barChartContainer}>
       <View style={styles.container}>
         {data.map((value, index) => (
-          <View key={index} style={styles.barContainer}>
+          <View 
+            key={index}             
+            style={[
+            styles.barContainer,
+            index === currentHour ? styles.highlightedBarContainer : null,
+          ]}>
             <View style={[styles.bar, { height: (value / maxDataValue) * 80 }]} />
           </View>
         ))}
@@ -96,6 +104,9 @@ const styles = StyleSheet.create({
   },
   textGray: {
     color: '#666'
+  },
+  highlightedBarContainer: {
+    backgroundColor: '#045BC6', // Highlighted bar color
   },
 });
 
