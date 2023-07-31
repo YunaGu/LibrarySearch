@@ -2,10 +2,18 @@ import React, { useState } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import People from "../assets/people.png";
 // import Icon from 'react-native-vector-icons/Ionicons';
-import Barchart from './Barchart';
+import BarChart from './CustomisedBarChart';
 import BottomModal from './BottomModal';
 
 const Occupancy = () => {
+
+  const [realTimeOccupancy, setRealTimeOccupancy] = useState(70);
+  const [selectedColumnIndex, setSelectedColumnIndex] = useState(-1);
+  const [realTimeData, setRealTimeData] = useState({ time: '11 am', value: 70 });
+  const [forecastData, setForecastData] = useState({ time: 'Tap hours for forecasts', value: '' });
+
+  const data = [0,0,0,0,0,0,0,5,10,40,70,60,50,55,70,60,30,20,10,3,0,0,0,0];
+
 
   return (
     <View style={styles.compWrapper}>
@@ -21,8 +29,8 @@ const Occupancy = () => {
 
       <View style={styles.rates}>
         <View style={styles.realTime}>
-          <Text style={styles.textBodyDefault}>Real time: 11 am - </Text>
-          <Text style={[styles.textBodyDefault, styles.textBlue]}>70%</Text>
+          <Text style={styles.textBodyDefault}>Real time: {realTimeData.time} - </Text>
+          <Text style={[styles.textBodyDefault, styles.textBlue]}>{realTimeData.value}%</Text>
         </View>
 
         <View style={styles.forecast}>
@@ -32,7 +40,10 @@ const Occupancy = () => {
 
       {/* Bar chart */}
       <View style={styles.barChart}>
-        <Barchart />
+        {/* <Barchart data={[0, 0, 0, 0, 0, 0, 0, 5, 10, 40, { value: 70, itemStyle: { color: '#045BC6' } }, 60, 50, 55, 70, 60, 30, 20, 10, 3, 0, 0, 0, 0]} selectedColumnIndex={selectedColumnIndex} /> */}
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <BarChart data={data} />
+    </View>
       </View>
     </View>
   );
