@@ -6,11 +6,6 @@ import Barchart from './Barchart';
 import BottomModal from './BottomModal';
 
 const Occupancy = () => {
-  const [realTimeOccupancy, setRealTimeOccupancy] = useState(70);
-
-  const [selectedColumnIndex, setSelectedColumnIndex] = useState(-1);
-  const [realTimeData, setRealTimeData] = useState({ time: '11 am', value: 70 });
-  const [forecastData, setForecastData] = useState({ time: 'Tap hours for forecasts', value: '' });
 
   return (
     <View style={styles.compWrapper}>
@@ -26,8 +21,8 @@ const Occupancy = () => {
 
       <View style={styles.rates}>
         <View style={styles.realTime}>
-          <Text style={styles.textBodyDefault}>Real time: {realTimeData.time} - </Text>
-          <Text style={[styles.textBodyDefault, styles.textBlue]}>{realTimeData.value}%</Text>
+          <Text style={styles.textBodyDefault}>Real time: 11 am - </Text>
+          <Text style={[styles.textBodyDefault, styles.textBlue]}>70%</Text>
         </View>
 
         <View style={styles.forecast}>
