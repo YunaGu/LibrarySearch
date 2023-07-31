@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const BarChart = ({ data }) => {
   const maxDataValue = Math.max(...data);
@@ -15,18 +15,29 @@ const BarChart = ({ data }) => {
   // Define the indices of the labels to remain visible
   const visibleIndices = [3, 6, 9, 12, 15, 18, 21, 24];
 
+    // State variable to keep track of the selected column index
+    const [selectedColumn, setSelectedColumn] = useState(null);
+
+    // Function to handle column click
+    const handleColumnClick = (index) => {
+      setSelectedColumn(index === selectedColumn ? null : index);
+    };
+  
+
   return (
     <View style={styles.barChartContainer}>
       <View style={styles.container}>
         {data.map((value, index) => (
-          <View 
-            key={index}             
+          <TouchableOpacity 
+            key={index}    
+            onPress={() => handleColumnClick(index)}         
             style={[
-            styles.barContainer,
-            index === currentHour ? styles.highlightedBarContainer : null,
-          ]}>
+              styles.barContainer,
+              index === currentHour ? styles.highlightedBarContainer : null,
+              index === selectedColumn ? styles.selectedBarContainer : null,
+            ]}>
             <View style={[styles.bar, { height: (value / maxDataValue) * 80 }]} />
-          </View>
+          </TouchableOpacity>
         ))}
       </View>
 
@@ -107,6 +118,9 @@ const styles = StyleSheet.create({
   },
   highlightedBarContainer: {
     backgroundColor: '#045BC6', // Highlighted bar color
+  },
+  selectedBarContainer: {
+    backgroundColor: '#045BC6', // Selected bar color
   },
 });
 
