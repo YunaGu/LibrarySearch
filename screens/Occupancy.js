@@ -3,12 +3,12 @@ import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import People from "../assets/people.png";
 // import Icon from 'react-native-vector-icons/Ionicons';
 import BarChart from './CustomisedBarChart';
-// import Barchart from './Barchart';
+import Barchart from './Barchart';
 import BottomModal from './BottomModal';
 
 const Occupancy = () => {
 
-  const data = [10,10,10,10,10,10,10,5,10,40,70,60,50,55,70,60,30,20,10,3,20,20,20,20];
+  const data = [0,0,0,0,0,0,0,5,10,40,70,60,50,55,70,60,30,20,10,3,0,0,0,0];
 
   // Get the current hour from the system time
   const currentHour = new Date().getHours();
@@ -61,15 +61,11 @@ const Occupancy = () => {
       <View style={styles.barChart}>
         {/* <Barchart data={[0, 0, 0, 0, 0, 0, 0, 5, 10, 40, { value: 70, itemStyle: { color: '#045BC6' } }, 60, 50, 55, 70, 60, 30, 20, 10, 3, 0, 0, 0, 0]} selectedColumnIndex={selectedColumnIndex} /> */}
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      {/* <BarChart data={data} /> */}
-          <BarChart data={data} onColumnClick={handleColumnClick}/>
+          <BarChart data={data} onColumnClick={handleColumnClick}/>    
         </View>
       </View>
-
+      {/* <Barchart/> */}
     </View>
-        {/* <View style={styles.forecast}>
-          <Text style={[styles.textBodyDefault, styles.textGray]}>Tap hours for forecasts</Text>
-        </View> */}
     </View>
   );
 };
@@ -95,25 +91,6 @@ const styles = StyleSheet.create({
   },
   textBlue: {
     color: '#045BC6'
-  },
-  border: {
-    borderColor: 'rgba(0, 0, 0, 0.20)',
-    borderWidth: 1,
-    borderRadius: 6,
-
-    width: 135, //how to hug content?
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-
-    gap: 10,
-
-    display: 'inline-flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-
-    marginLeft: 38,
   },
   firstTwo: {
     display: 'flex',
@@ -141,19 +118,15 @@ const styles = StyleSheet.create({
   },
   textBodyBold: {
     color: "#383735",
-    // fontFamily: 'Franklin Gothic Book',
     fontSize: 17,
     lineHeight: 24,
-    // fontStyle: 'normal',
     fontWeight: '600',
     textAlign: "left",
   },
   textBodyDefault: {
     color: "#383735",
-    // fontFamily: 'Franklin Gothic Book',
     fontSize: 17,
     lineHeight: 24,
-    // fontStyle: 'normal',
     fontWeight: '400',
     textAlign: "left",
   },

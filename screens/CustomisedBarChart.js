@@ -9,8 +9,8 @@ const BarChart = ({ data, onColumnClick }) => {
     '12p', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p', '10p', '11p',
   ];
 
-    // Get the current hour from the system time
-    const currentHour = new Date().getHours();
+  // Get the current hour from the system time
+  const currentHour = new Date().getHours();
 
   // Define the indices of the labels to remain visible
   const visibleIndices = [3, 6, 9, 12, 15, 18, 21, 24];
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     // width: 330 / 24 - 4, // Divide the width by the number of data points
     backgroundColor: 'rgba(4, 91, 198, 0.50)',
     // borderRadius: 2,
-    margin: 1,
+    margin: 1.5,
   },
   labelsContainer: {
     flexDirection: 'row',
@@ -109,17 +109,18 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     borderBottomWidth: 1,
-    borderColor: 'gray',
+    borderColor: '#666',
     width: '100%'
   },
   textGray: {
     color: '#666'
   },
   highlightedBarContainer: {
-    backgroundColor: '#045BC6', // Highlighted bar color
+    backgroundColor: '#045BC6',
   },
   selectedBarContainer: {
-    backgroundColor: '#045BC6', // Selected bar color
+    backgroundColor: '#045BC6',
+    margin: 1.5,
   },
 });
 
