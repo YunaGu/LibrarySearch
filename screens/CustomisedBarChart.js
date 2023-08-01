@@ -15,14 +15,12 @@ const BarChart = ({ data, onColumnClick }) => {
   // Define the indices of the labels to remain visible
   const visibleIndices = [3, 6, 9, 12, 15, 18, 21, 24];
 
-    // State variable to keep track of the selected column index
-    const [selectedColumn, setSelectedColumn] = useState(null);
+  // State variable to keep track of the selected column index
+  const [selectedColumn, setSelectedColumn] = useState(null);
 
-  // Function to handle column click
-  const handleColumnClick = (index) => {
+  const handleColumnClick = (index) =>{
     setSelectedColumn(index === selectedColumn ? null : index);
-    onColumnClick(index === selectedColumn ? null : index, data[index]);
-  };
+  }
 
 
   return (
@@ -31,7 +29,7 @@ const BarChart = ({ data, onColumnClick }) => {
         {data.map((value, index) => (
           <TouchableOpacity 
             key={index}    
-            onPress={() => onColumnClick(index, value)}       
+            onPress={() => [onColumnClick(index, value), handleColumnClick(index)]}       
             style={[
               styles.barContainer,
               index === currentHour ? styles.highlightedBarContainer : null,
