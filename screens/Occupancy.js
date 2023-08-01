@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import People from "../assets/people.png";
 // import Icon from 'react-native-vector-icons/Ionicons';
 import BarChart from './CustomisedBarChart';
@@ -14,6 +14,22 @@ const Occupancy = () => {
       const currentHour = new Date().getHours();
 
 
+  // Define the initial state for selected column and its value
+  const [selectedColumn, setSelectedColumn] = useState(null);
+  const [selectedColumnValue, setSelectedColumnValue] = useState(null);
+
+  // Function to handle column click
+  const handleColumnClick = (index, value) => {
+    setSelectedColumn(index === selectedColumn ? null : index);
+    setSelectedColumnValue(index === selectedColumn ? null : value);
+  };
+
+    // Define the xLabels for the columns
+    const xLabels = [
+      '0 a', '1 a', '2 a', '3 a', '4 a', '5 a', '6 a', '7 a', '8 a', '9 a', '10 a', '11 a',
+      '12 p', '1 p', '2 p', '3 p', '4 p', '5 p', '6 p', '7 p', '8 p', '9 p', '10 p', '11 p',
+    ]; 
+
   return (
     <View style={styles.compWrapper}>
       <View style={styles.titleWrapper}>
@@ -27,26 +43,33 @@ const Occupancy = () => {
       <BottomModal />
 
       <View style={styles.rates}>
-        <View style={styles.realTime}>
-          <Text style={styles.textBodyDefault}>Real time: {currentHour} {(currentHour>12? 'pm': 'am' )} - </Text>
-          <Text style={[styles.textBodyDefault, styles.textBlue]}>{data[currentHour]}%</Text>
-        </View>
-
-        <View style={styles.forecast}>
-          <Text style={[styles.textBodyDefault, styles.textGray]}>Tap hours for forecasts</Text>
-        </View>
+      <View style={styles.realTime}>
+        <Text style={styles.textBodyDefault}>Real time: {currentHour} {currentHour > 12 ? 'pm' : 'am'} - </Text>
+        <Text style={[styles.textBodyDefault, styles.textBlue]}>{data[currentHour]}%</Text>
       </View>
 
-      {/* Bar chart */}
+      <TouchableOpacity style={styles.forecast} onPress={() => setSelectedColumnValue(null)}>
+        <Text style={styles.textBodyDefault}>
+          {selectedColumnValue ? `Forecast: ${xLabels[selectedColumn]}m - ` : ''}
+          <Text style={selectedColumnValue ? styles.textBlue : styles.textGray}>
+            {selectedColumnValue ? `${selectedColumnValue}%` : 'Tap hours for forecasts'}
+          </Text>
+        </Text>
+      </TouchableOpacity>
+
+
       <View style={styles.barChart}>
         {/* <Barchart data={[0, 0, 0, 0, 0, 0, 0, 5, 10, 40, { value: 70, itemStyle: { color: '#045BC6' } }, 60, 50, 55, 70, 60, 30, 20, 10, 3, 0, 0, 0, 0]} selectedColumnIndex={selectedColumnIndex} /> */}
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       {/* <BarChart data={data} /> */}
-      <BarChart data={data} />
-    </View>
+          <BarChart data={data} onColumnClick={handleColumnClick}/>
+        </View>
       </View>
 
-      {/* <Barchart /> */}
+    </View>
+        {/* <View style={styles.forecast}>
+          <Text style={[styles.textBodyDefault, styles.textGray]}>Tap hours for forecasts</Text>
+        </View> */}
     </View>
   );
 };

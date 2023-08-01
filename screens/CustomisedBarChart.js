@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const BarChart = ({ data }) => {
+const BarChart = ({ data, onColumnClick }) => {
   const maxDataValue = Math.max(...data);
 
   const xLabels = [
@@ -18,11 +18,12 @@ const BarChart = ({ data }) => {
     // State variable to keep track of the selected column index
     const [selectedColumn, setSelectedColumn] = useState(null);
 
-    // Function to handle column click
-    const handleColumnClick = (index) => {
-      setSelectedColumn(index === selectedColumn ? null : index);
-    };
-  
+  // Function to handle column click
+  const handleColumnClick = (index) => {
+    setSelectedColumn(index === selectedColumn ? null : index);
+    onColumnClick(index === selectedColumn ? null : index, data[index]);
+  };
+
 
   return (
     <View style={styles.barChartContainer}>
@@ -30,7 +31,7 @@ const BarChart = ({ data }) => {
         {data.map((value, index) => (
           <TouchableOpacity 
             key={index}    
-            onPress={() => handleColumnClick(index)}        
+            onPress={() => onColumnClick(index, value)}       
             style={[
               styles.barContainer,
               index === currentHour ? styles.highlightedBarContainer : null,
