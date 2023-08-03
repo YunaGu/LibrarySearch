@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView} from 'react-native'
+import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
 import Top from './screens/Top'
 import Seperator from './screens/Seperator'
@@ -28,21 +28,21 @@ const App = () => {
   // });
 
   return (
-    <ScrollView>
-      <View style={styles.outtom}>
-        <View style={{height:40}}></View>
-        <Top></Top>
-        <Seperator></Seperator>
-        <OpenTime></OpenTime>
-        <Seperator></Seperator>
-        <Occupancy></Occupancy>
-        <Seperator></Seperator>
-        <GoodToKnow></GoodToKnow>
-        <Seperator></Seperator>
-        <Details></Details>
-      </View>
-    </ScrollView>
-
+    <SafeAreaView>
+      <ScrollView>
+        <View style={styles.outtom}>
+          <Top></Top>
+          <Seperator></Seperator>
+          <OpenTime></OpenTime>
+          <Seperator></Seperator>
+          <Occupancy></Occupancy>
+          <Seperator></Seperator>
+          <GoodToKnow></GoodToKnow>
+          <Seperator></Seperator>
+          <Details></Details>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
