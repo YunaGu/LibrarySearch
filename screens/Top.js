@@ -25,7 +25,7 @@ export default class Top extends Component {
   };
 
   render() {
-    const { select } = this.state; //解构, 从state里取一个select,  state changed-> re-render
+    const { select } = this.state; //deconstruct, get select from state,  state changed-> re-render
 
     return (
       <View style={{ width: '100%', height: 315 }}>
@@ -69,7 +69,7 @@ export default class Top extends Component {
                 </View>
             </View>
             <View style={styles.item}>
-                <Text style={styles.textBodyBold}>Distance</Text>
+                <Text style={styles.textBodyDefault}>Distance</Text>
                 <View style={styles.textWrapper}>
                     <Text style={[styles.textBodyBold, styles.textDark]}>1.1 </Text>
                     <Text style={[styles.textBodyDefault, styles.textDark]}>mi</Text>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
         // fontFamily: 'Franklin Gothic Book',
         fontSize: 17,
         lineHeight: 24,
-        fontWeight: 400,
+        fontWeight: '400',
         textAlign: "left",
     },
     textBodyBold:{
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
         // fontFamily: 'Franklin Gothic Book',
         fontSize: 17,
         lineHeight: 24,
-        fontWeight: 600,
+        fontWeight: '600',
         textAlign: "left",
     },
     textBodyWhite:{
@@ -169,13 +169,13 @@ const styles = StyleSheet.create({
         // fontFamily: 'Franklin Gothic Book',
         fontSize: 17,
         lineHeight: 24,
-        fontWeight: 400, //why?
+        fontWeight: '400',
         textAlign: "left",
     },
     smText:{
         color: '#666',
         fontSize: 12,
-        fontWeight: 400,
+        fontWeight: '400',
         lineHeight: 12 /* 100% */
     },
   unselected: {
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     marginTop: 152,
-    marginLeft: 250, //why cannot be marginRight: 20?
+    marginLeft: 250,
     height: 34,
     width: 120,
   },
