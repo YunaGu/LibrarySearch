@@ -14,7 +14,7 @@ const BottomModal = () => {
           Alert.alert('Modal has been closed.');
           setModalVisible(!modalVisible);
         }}>
-        <View style={styles.centeredView}>
+        <Pressable style={styles.centeredView} onPress={() => setModalVisible(!modalVisible)}>
           <View style={styles.modalView}>
             <View style={styles.smRetangular}></View>
             <Text style={styles.textBodyBold}>Choose floor</Text>
@@ -46,7 +46,7 @@ const BottomModal = () => {
                 </Pressable>
             </View>
           </View>
-        </View>
+        </Pressable>
       </Modal>
       <Pressable
         style={styles.border}
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         marginLeft: 38,
     },
   centeredView: {
-    // backgroundColor:'red',
+    backgroundColor:'rgba(0, 0, 0, 0.25)',
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
