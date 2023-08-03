@@ -13,9 +13,11 @@ const Tabs = ({ tabs, onTabPress }) => {
 
   // Scroll to the active tab whenever it changes
   useEffect(() => {
-    if (scrollViewRef.current && tabWidths[activeTab]) {
+    if (scrollViewRef.current && tabWidths[activeTab]) { //whether there's a valid width value stored in tabWidths for activeTab
       scrollViewRef.current.scrollTo({
-        x: Object.values(tabWidths).slice(0, activeTab).reduce((a, b) => a + b, 0),
+        x: Object.values(tabWidths) //coverts the tabWidths object into an array
+        .slice(0, activeTab) //take a clice of the array up to the activeTab index
+        .reduce((a, b) => a + b, 0), //reduces the sliced array to a signle value (sum of all the tab widths)
         animated: true,
       });
     }

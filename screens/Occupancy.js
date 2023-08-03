@@ -44,7 +44,7 @@ const Occupancy = () => {
 
       <View style={styles.rates}>
       <View style={styles.realTime}>
-        <Text style={styles.textBodyDefault}>Real time: {currentHour} {currentHour > 12 ? 'pm' : 'am'} - </Text>
+        <Text style={styles.textBodyDefault}>Real time: {currentHour > 12? currentHour - 12 : currentHour} {currentHour > 12 ? 'pm' : 'am'} - </Text>
         <Text style={[styles.textBodyDefault, styles.textBlue]}>{data[currentHour]}%</Text>
       </View>
 
